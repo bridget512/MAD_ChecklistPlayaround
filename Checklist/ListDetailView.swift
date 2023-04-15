@@ -10,7 +10,8 @@ import SwiftUI
 
 struct ListDetailView: View {
     @Binding var model: MyListItem
-    @State var tmpList: MyListItem = MyListItem(title: "", isChecked: false)
+    @State var tmpList: MyListItem = MyListItem(title: "",  items: [], isChecked: false)
+    
     var body: some View {
         NavigationView {
             List {
