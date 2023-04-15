@@ -14,12 +14,15 @@ struct ContentView: View {
         NavigationView {
             ListView(list: $model)
         }
+
+        
     }
 }
 
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(model: .constant(MyLists(title: "List", items: [])))
+       ContentView(model: .constant(MyLists(title: "List", items: [])))
+//       ContentView()
     }
 }

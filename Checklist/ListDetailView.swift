@@ -9,15 +9,13 @@ import SwiftUI
 
 
 struct ListDetailView: View {
-    @Binding var model: MyLists
-    @State var tmpList:MyLists = MyLists(title: "", items: [])
+    @Binding var model: MyListItem
+    @State var tmpList: MyListItem = MyListItem(title: "", isChecked: false)
     var body: some View {
         NavigationView {
             List {
                 Text("List Detail View")
-//                ForEach (model, id\.self) { model in
-//
-//                }
+
             }
             
 //            ListDetailView(list: $model)
