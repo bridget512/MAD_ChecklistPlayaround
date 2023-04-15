@@ -9,7 +9,7 @@ import SwiftUI
 
 @main
 struct ChecklistApp: App {
-    @State var model = MyLists(title: "List",items: [])
+    @State var model = MyLists(title: "List", items: [])
     
     var body: some Scene {
         WindowGroup {

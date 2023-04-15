@@ -31,7 +31,7 @@ struct MyListItem: Hashable {
     
     mutating func addNewItem() {
         let listItemTitle = self.title
-        items.append(MyListItem(title: listItemTitle, items: []))
+        items.append(MyListItem(title: listItemTitle, items: [], isChecked: false))
     }
 }
 

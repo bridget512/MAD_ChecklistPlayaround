@@ -18,14 +18,15 @@ struct ListView: View {
                 ForEach($tmpList.items,id:\.self) { $list in
                     
                     NavigationLink(destination: ListView(list: $list)) {
-                        Text("\(list.title) (\(list.totalChildren))" )
+//                        Text("\(list.title) (\(list.totalChildren))" )
+                        Text(list.title)
                     }
-                    
                 }
             }
-            .frame(height:300)
-            Button("Add new list item"){ tmpList.addNewChild() }
+//            .frame(height:300)
             Spacer()
+            Button("Add new list item"){ tmpList.addNewChild() }
+            
         }
         .navigationTitle(list.title)
 //            .onAppear{

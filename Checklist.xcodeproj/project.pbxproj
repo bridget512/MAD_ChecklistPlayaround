@@ -102,9 +102,9 @@
 			children = (
 				9C74FCD329EA6F0E008FE44E /* ChecklistApp.swift */,
 				9C74FCD529EA6F0E008FE44E /* ContentView.swift */,
-				9C74FCFF29EA6FD5008FE44E /* DataModel.swift */,
 				9C74FCFD29EA6FAD008FE44E /* ListView.swift */,
 				9CC3D63629EA734B00FF7BDF /* ListDetailView.swift */,
+				9C74FCFF29EA6FD5008FE44E /* DataModel.swift */,
 				9C74FCD729EA6F0F008FE44E /* Assets.xcassets */,
 				9C74FCD929EA6F0F008FE44E /* Preview Content */,
 			);

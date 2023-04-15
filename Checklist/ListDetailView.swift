@@ -9,8 +9,8 @@ import SwiftUI
 
 
 struct ListDetailView: View {
-    @Binding var model: MyListItem
-    @State var tmpList: MyListItem = MyListItem(title: "",  items: [], isChecked: false)
+    @Binding var listItem: MyListItem
+    @State var tmpListItem: MyListItem = MyListItem(title: "",  items: [], isChecked: false)
     
     var body: some View {
         NavigationView {
@@ -23,3 +23,11 @@ struct ListDetailView: View {
         }
     }
 }
+
+
+//struct ListDetailView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ContentView(model: .constant(MyListItem(title: "List", items: [], isChecked: false)))
+////       ContentView()
+//    }
+//}
