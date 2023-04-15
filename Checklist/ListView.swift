@@ -9,24 +9,23 @@ import SwiftUI
 
 struct ListView: View {
     
-    @Binding var list:ListNode
-    @State var tmpList:ListNode = ListNode(title: "", children: [])
+    @Binding var list:MyLists
+    @State var tmpList:MyLists = MyLists(title: "", items: [])
     
     var body: some View {
         VStack{
             List{
-                ForEach($tmpList.children,id:\.self) { $list in
+                ForEach($tmpList.items,id:\.self) { $list in
                     NavigationLink(destination: ListView(list: $list)) {
                         Text("\(list.title) (\(list.totalChildren))" )
                     }
                 }
-            }.frame(height:300)
-            Button("Add new list item"){
-                tmpList.addNewChild()
             }
+            .frame(height:300)
+            Button("Add new list item"){ tmpList.addNewChild() }
             Spacer()
-        }.navigationTitle(list.title)
-      
+        }
+        .navigationTitle(list.title)
             .onAppear{
                 tmpList = list
                 print(list.title + " appear")

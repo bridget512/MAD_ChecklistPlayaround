@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Binding var model: ListNode
+    @Binding var model: MyLists
         
     var body: some View {
         NavigationView {
@@ -20,6 +20,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(model: .constant(ListNode(title: "List", children: [])))
+        ContentView(model: .constant(MyLists(title: "List", items: [])))
     }
 }

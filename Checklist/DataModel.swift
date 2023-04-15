@@ -7,16 +7,24 @@
 
 import Foundation
 
-struct ListNode: Hashable {
+struct MyLists: Hashable {
+    let id = UUID()
     var title: String
-    var children: [ListNode]
+    var items: [MyLists]
 
     var totalChildren:Int {
-        children.reduce(0){ $0 + $1.totalChildren + 1}
+        items.reduce(0){ $0 + $1.totalChildren + 1}
     }
     mutating func addNewChild() {
-        let childTitle = self.title + " " + String(children.count)
-        children.append(ListNode(title: childTitle, children: []))
+        let childTitle = self.title + " " + String(items.count)
+        items.append(MyLists(title: childTitle, items: []))
     }
     
+}
+
+
+struct MyListItem: Hashable {
+    let id = UUID()
+    var title: String
+    var isChecked: Bool = false
 }
